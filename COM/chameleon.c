@@ -3,8 +3,8 @@
  *        \file  chameleon.c
  *
  *      \author  rla
- *        $Date: 2012/09/10 16:09:04 $
- *    $Revision: 1.26 $
+ *        $Date: 2015/10/20 08:45:58 $
+ *    $Revision: 1.27 $
  *
  *        \brief  routines for chameleon library
  *
@@ -19,6 +19,10 @@
  *-------------------------------[ History ]---------------------------------
  *
  * $Log: chameleon.c,v $
+ * Revision 1.27  2015/10/20 08:45:58  ts
+ * R: wrong OSS_PciXXX API change from first A21 BSP was still present
+ * M: update with reworked file, PCI domain evaluation now done within OSS_Pcixx
+ *
  * Revision 1.26  2012/09/10 16:09:04  sy
  * R:1. only single PCI domain supported.
  *      2. in line 380, the complete BAR value, including attribute bits are used to determine if the BAR is set up
@@ -324,9 +328,6 @@ void ChameleonTerm( CHAMELEON_HANDLE **chahP)
 
 CHAMELEONV0_STATIC_EXTERN
 int32 ChameleonInit( OSS_HANDLE *osh,
-#ifdef OSS_VXBUS_SUPPORT
-					 VXB_DEVICE_ID busCtrlID,
-#endif
 					 int pciBus,
 					 int pciDev,
 					 CHAMELEON_HANDLE **chahP)
@@ -344,9 +345,6 @@ int32 ChameleonInit( OSS_HANDLE *osh,
 	|  check if PCI device present  |
 	+------------------------------*/	
 	if( (error = OSS_PciGetConfig(osh,
-#ifdef OSS_VXBUS_SUPPORT			
-			busCtrlID,
-#endif			
 			pciBus,pciDev,0,OSS_PCI_DEVICE_ID,&val)) == 0)
 	{
 		if ( val == 0xFFFF ){
@@ -377,10 +375,10 @@ int32 ChameleonInit( OSS_HANDLE *osh,
 	for( i = 0; i < NBR_OF_BARS; i++ ){
 		
 		OSS_PciGetConfig(osh,
-#ifdef OSS_VXBUS_SUPPORT
-				busCtrlID,
-#endif				
-				pciBus, pciDev, 0, OSS_PCI_ADDR_0+i, &val);
+				 pciBus, 
+				 pciDev, 
+				 0, 
+				 OSS_PCI_ADDR_0+i, &val);
 
 		/* bar unassigned? */
 		if( ((val & 0xFFFFFFF0) == 0xfffffff0) || ((val & 0xFFFFFFF0) == 0x00000000) ){
@@ -452,9 +450,6 @@ int32 ChameleonInit( OSS_HANDLE *osh,
 		/* V2 Init */
 		if( (error=chah->f2.InitPci(
 			osh,
-#ifdef OSS_VXBUS_SUPPORT
-			busCtrlID,
-#endif			
 			pciBus, pciDev, 0, &chah->h2)) ){
 			ChameleonTerm( (CHAMELEON_HANDLE **)&chah );
 			return error;

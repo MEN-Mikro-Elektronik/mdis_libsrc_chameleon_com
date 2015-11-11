@@ -3,8 +3,8 @@
  *        \file  chameleonv2.c
  *
  *      \author  dieter.pfeuffer@men.de
- *        $Date: 2014/07/22 17:01:01 $
- *    $Revision: 2.30 $
+ *        $Date: 2015/10/20 08:46:25 $
+ *    $Revision: 2.31 $
  *
  *        \brief  Chameleon-V2 routines for chameleon library
  *
@@ -16,6 +16,10 @@
  *-------------------------------[ History ]---------------------------------
  *
  * $Log: chameleonv2.c,v $
+ * Revision 2.31  2015/10/20 08:46:25  ts
+ * R: wrong OSS_PciXXX API change from first A21 BSP was still present
+ * M: update with reworked file, PCI domain evaluation now done within OSS_Pcixx
+ *
  * Revision 2.30  2014/07/22 17:01:01  ts
  * R: member reserved appeared also when CHAM_V0 support activated
  * M: remove reference to reserved member also in CHAM_V0 dependent code
@@ -403,9 +407,6 @@ typedef struct {
 /* Chameleon-V2 functions */
 _STATIC_ int32 InitPci(
 	OSS_HANDLE *osh,
-#ifdef OSS_VXBUS_SUPPORT
-	VXB_DEVICE_ID busCtrlID,
-#endif	
 	u_int32 pciBus,
 	u_int32 pciDev,
 	u_int32 pciFunc,
@@ -520,9 +521,6 @@ extern int32 CHAM_Init( CHAM_FUNCTBL *fP )
  */
 _STATIC_ int32 InitPci(
 	OSS_HANDLE *osh,
-#ifdef OSS_VXBUS_SUPPORT
-	VXB_DEVICE_ID busCtrlID,
-#endif
 	u_int32 pciBus,
 	u_int32 pciDev,
 	u_int32 pciFunc,
@@ -550,9 +548,6 @@ _STATIC_ int32 InitPci(
 	|  check if PCI device present  |
 	+------------------------------*/	
 	if( OSS_PciGetConfig(osh,
-#ifdef OSS_VXBUS_SUPPORT
-		busCtrlID,
-#endif
 		pciBus,pciDev,pciFunc,
 		OSS_PCI_VENDOR_ID,&val) ){
 		error = CHAMELEONV2_PCIDEV_ERR;
@@ -568,9 +563,6 @@ _STATIC_ int32 InitPci(
 	}
 
 	if( OSS_PciGetConfig(osh,
-#ifdef OSS_VXBUS_SUPPORT
-		busCtrlID,
-#endif			
 		pciBus,pciDev,pciFunc,
 		OSS_PCI_DEVICE_ID,&val) ){
 		error = CHAMELEONV2_PCIDEV_ERR;
@@ -614,9 +606,6 @@ _STATIC_ int32 InitPci(
 
 		/* get BAR info (assigned or not, mem/io ) */
 		OSS_PciGetConfig(osh,
-#ifdef OSS_VXBUS_SUPPORT
-			busCtrlID,
-#endif		
 			pciBus, pciDev, pciFunc,
 			OSS_PCI_ADDR_0+i, (int32*)&barVal);
 		
@@ -679,9 +668,6 @@ _STATIC_ int32 InitPci(
 			CHAMELEON_UNIT	cha0Unit;
 
 			if( (error=ChameleonInit( h->osh,
-#ifdef OSS_VXBUS_SUPPORT
-				busCtrlID,
-#endif					
 				h->pciLoc.bus, h->pciLoc.dev, &h->h0 )) ){
 				goto CLEANUP;
 			}
