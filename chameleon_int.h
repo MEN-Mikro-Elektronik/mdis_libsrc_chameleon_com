@@ -62,9 +62,12 @@
 #include <MEN/men_typs.h>
 #include <MEN/chameleon.h>
 
-#if defined(VXWORKS) && defined(MAC_IO_MAPPED) && CPU_FAMILY==PPC 
+
+#if defined(VXWORKS) && defined(MAC_IO_MAPPED) && CPU_FAMILY==PPC
 # undef MAC_IO_MAPPED
+# ifndef MAC_MEM_MAPPED
 # define MAC_MEM_MAPPED
+# endif
 # include <MEN/maccess.h>
 # undef MAC_MEM_MAPPED
 # define MAC_IO_MAPPED
