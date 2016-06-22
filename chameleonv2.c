@@ -1160,6 +1160,12 @@ static int32 UnitIdentNode(
 
 	unit->busId = unitN->tblN->busId;
 
+	/*klocwork id1409 - variable bar might be 6 or 7 */
+	if( bar >= NBR_OF_BARS ) {
+		DBGWRT_ERR((DBH,"*** UnitIdent: value of 'bar' invalid, not a PCI bar! (bar=%d)\n", bar));
+		return CHAMELEONV2_TABLE_ERR; /* safe to return here, no resources allocated yet */
+	}
+
 	/*
 	 * Address computation
 	 */
@@ -2016,6 +2022,12 @@ static int32 HEnumTbl( CHAMELEONV2_HDL *h, void *tblAddr, BRG_NODE *prevBrgN )
 			bar = (u_int8)(val & 0x7);
 			instance = (u_int8)((val>> 3) & 0x3f);
 			dbar = (u_int8)((val>> 9) & 0x7);
+
+			/*klocwork id1418 - variable bar might be 6 or 7 */
+			if( bar >= NBR_OF_BARS ) {
+				DBGWRT_ERR((DBH,"*** UnitIdent: value of 'bar' invalid, not a PCI bar! (bar=%d)\n", bar));
+				return CHAMELEONV2_TABLE_ERR; /* safe to return here, no resources allocated yet */
+			}
 
 			/* unassigned BAR? */
 			if( h->ba[bar].type == -1 ){
