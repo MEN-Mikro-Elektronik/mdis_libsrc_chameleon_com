@@ -672,7 +672,7 @@ _STATIC_ int32 InitPci(
 				goto CLEANUP;
 			}
 			/* determine number of units, dump info while we're here */
-			DBGWRT_1((DBH, " Unit                modCode Rev    Inst\tIRQ\tBAR Offset   Addr\n"));
+			DBGWRT_1((DBH, " Unit                modCode Rev    Inst  IRQ  BAR Offset   Addr\n"));
 				i=0;
 			while( ChameleonUnitIdent( h->h0, i, &cha0Unit ) == CHAMELEON_OK ) {
 	
@@ -680,7 +680,7 @@ _STATIC_ int32 InitPci(
 							   "0x%04x %2d"			/* devId/Rev. */
 							   "   0x%02x"			/* instance 		*/
 							   "\t0x%02x"			/* interrupt 		*/
-							   "\t%d   0x%04x"		/* BAR / offset  	*/
+							   "   %d   0x%04x"		/* BAR / offset  	*/
 							   "   0x%p\n",			/* addr 			*/
 				   i, ChameleonModName( cha0Unit.modCode), cha0Unit.modCode, cha0Unit.revision, cha0Unit.instance,
 				   cha0Unit.interrupt, cha0Unit.bar, (unsigned int)cha0Unit.offset, cha0Unit.addr));
@@ -2236,15 +2236,15 @@ CLEANUP:
 		u_int16				dbgNbr=0;
 		CHAMELEONV2_UNIT 	unit;
 	
-		DBGWRT_1((DBH, "%s Unit                devId   Grp Rev  Inst\tIRQ\tBAR Offset   Addr\n",spP));
+		DBGWRT_1((DBH, "%s Unit                devId   Grp Rev  Inst  IRQ   BAR  Offset      Addr\n",spP));
 		
 		while ( (0 == UnitIdent( h, dbgNbr, &unit )) ){
 			DBGWRT_1((DBH, " %02d %-17s"  		/* idx + name		*/
 			               "0x%04x %2d   %2d"	/* devId/Group/Rev. */
 	                       "   0x%02x"			/* instance 		*/
-	                       "\t0x%02x"			/* interrupt 		*/
-	                       "\t%d   0x%04x"		/* BAR / offset  	*/
-	                       "   %p\n",			/* addr 			*/
+	                       "  0x%02x"			/* interrupt 		*/
+	                       "   %d   0x%08x"		/* BAR / offset  	*/
+	                       "  0x%p\n",			/* addr 			*/
 			   dbgNbr, CHAM_DevIdToName( unit.devId), unit.devId, unit.group, unit.revision, unit.instance,
 			   unit.interrupt, unit.bar, (unsigned int)unit.offset, unit.addr));
 			dbgNbr++;
