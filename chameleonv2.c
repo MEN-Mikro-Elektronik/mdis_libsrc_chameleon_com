@@ -2031,7 +2031,7 @@ static int32 HEnumTbl( CHAMELEONV2_HDL *h, void *tblAddr, BRG_NODE *prevBrgN )
 			TBL_NODE	*scanTblN;
 			void*		nextTblAddr;
 			u_int32		chamOff, brgOff=0;
-			u_int8		dbar, instance;
+			u_int8		dbar;
 			u_int16		bar4acc;
 			u_int32		offset;
 			u_int32		size;
@@ -2041,7 +2041,6 @@ static int32 HEnumTbl( CHAMELEONV2_HDL *h, void *tblAddr, BRG_NODE *prevBrgN )
 			/* read bar and dbar at 0x04 */
 			val = CFGTABLE_READLONG( ma, 1 );
 			bar = (u_int8)(val & 0x7);
-			instance = (u_int8)((val>> 3) & 0x3f);
 			dbar = (u_int8)((val>> 9) & 0x7);
 
 			/*klocwork id1418 - variable bar might be 6 or 7 */
@@ -2069,9 +2068,9 @@ static int32 HEnumTbl( CHAMELEONV2_HDL *h, void *tblAddr, BRG_NODE *prevBrgN )
 			if( prevBrgN ){
 				/* previous bridge-window to small? */
 				if( size > prevBrgN->size ){
-					DBGWRT_ERR((DBH,"%s*** HEnumTbl#%db: BRIDGE #%d with instance=%d: "
+					DBGWRT_ERR((DBH,"%s*** HEnumTbl#%db: BRIDGE #%d: "
 						"brg-size (0x%x) > prev. brg-size (0x%x)\n",
-						spP, recLev, h->brgList.nbr, instance, size, prevBrgN->size ));
+						spP, recLev, h->brgList.nbr, size, prevBrgN->size ));
 					error = CHAMELEONV2_TABLE_ERR;
 					goto CLEANUP;
 				}
