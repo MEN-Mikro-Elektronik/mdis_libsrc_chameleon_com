@@ -11,37 +11,7 @@
  *
  *    \switches   _LITTLE_ENDIAN_ / _BIG_ENDIAN_, MENMON
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: chameleonloadem04.c,v $
- * Revision 1.9  2005/06/23 16:12:07  kp
- * Copyright line changed (sbo)
- *
- * Revision 1.8  2005/05/04 08:59:44  kp
- * support long FPGA header format
- *
- * Revision 1.7  2004/12/20 08:46:28  kp
- * changed ChameleonFpgaCodeIdentEM04 (use fpgaheader.c functions instead)
- *
- * Revision 1.6  2004/04/30 16:21:15  kp
- * added ChameleonFpgaCodeIdentEm04 to identify flash code without loading it
- *
- * Revision 1.5  2003/08/06 13:01:13  kp
- * changed file header for doxygen
- *
- * Revision 1.4  2003/07/10 14:08:00  rla
- * config status waiting time adapted to CYCEP1C12 FPGA
- *
- * Revision 1.3  2003/05/06 11:34:53  kp
- * Bug fix: goto errexit when FPGA file does not begin with "EM04"
- *
- * Revision 1.2  2002/09/12 13:46:59  kp
- * 1) Pass OSS handle to all OSS functions
- * 2) Now automatically switching PICR1 to allow flash writes
- *
- * Revision 1.1  2002/09/11 10:13:31  kp
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2002-2003 by MEN Mikro Elektronik GmbH, Nuremberg, Germany 
  ******************************************************************************/

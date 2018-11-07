@@ -11,39 +11,7 @@
  *     Switches: _LITTLE_ENDIAN_ / _BIG_ENDIAN_
  *               _DOXYGEN_ - to build proper doxygen documentation
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: chameleon_int.h,v $
- * Revision 2.9  2009/03/17 15:21:11  dpfeuffer
- * R: compiler error with VC2008 64bit compiler
- * M: (U_INT32_OR_64) cast added
- *
- * Revision 2.8  2008/03/31 11:31:40  DPfeuffer
- * - BIT4BAR(bar) macro added
- *
- * Revision 2.7  2007/07/11 09:15:13  CKauntz
- * added Swapping for Big and Little Endian
- *
- * Revision 2.6  2007/05/18 11:19:57  cs
- * removed CHAV2_PCI_VENID/..DEVID (defined in MEN/chameleon.h)
- *
- * Revision 2.5  2006/03/24 14:56:04  cschuster
- * changed:
- *     - access IO-mapped addresses with VXWORKS + PPC just like memory-mapped
- *
- * Revision 2.4  2005/07/08 14:42:15  ub
- * redeclaration of MACCESS removed
- *
- * Revision 2.3  2005/06/23 16:12:03  kp
- * Copyright line changed (sbo)
- *
- * Revision 2.2  2005/05/04 08:59:40  kp
- * moved static prototypes into C files
- * don't re-typedef MACCESS if mac_mem.h used
- *
- * Revision 2.1  2005/04/29 14:45:25  dpfeuffer
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright by MEN Mikro Elektronik GmbH, Nuremberg, Germany
  ******************************************************************************/

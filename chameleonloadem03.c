@@ -11,33 +11,7 @@
  *
  *    \switches   _LITTLE_ENDIAN_ / _BIG_ENDIAN_, MENMON
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: chameleonloadem03.c,v $
- * Revision 2.2  2008/08/27 10:34:38  cs
- * R: fpga loading failed once use of INIT_DONE enabled in FPGA (ERR 0xB4)
- *     - CYCLONE II needs max. 40us from CONFIG_DONE to INIT_DONE (tCD2UM)
- * M: extended wait time before checking INIT_DONE from 20 to 40us
- *
- * Revision 2.1  2006/02/22 15:22:25  ts
- * Initial Revision
- *
- * Revision 2.1  2006/02/22 15:16:17  ts
- * Initial Revision
- *
- * Revision 1.4  2005/06/24 08:26:34  kp
- * Copyright line changed (sbo)
- *
- * Revision 1.3  2005/05/25 09:48:04  kp
- * Use fpagheader.c funcs
- *
- * Revision 1.2  2004/12/20 08:45:58  kp
- * removed ChameleonFpgaCodeIdentEM03 (use fpgaheader.c functions instead)
- *
- * Revision 1.1  2004/11/04 17:30:29  kp
- * Initial Revision
- *
- * Cloned from EM04 rev 1.6
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2004 by MEN Mikro Elektronik GmbH, Nuremberg, Germany
  ******************************************************************************/

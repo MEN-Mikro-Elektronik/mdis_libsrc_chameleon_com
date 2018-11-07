@@ -12,25 +12,7 @@
  *
  *    \switches   _LITTLE_ENDIAN_ / _BIG_ENDIAN_, MENMON
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: fpgaheader.c,v $
- * Revision 1.5  2005/06/23 16:12:09  kp
- * Copyright line changed (sbo)
- *
- * Revision 1.4  2005/05/04 08:59:46  kp
- * The filenames of new-style FGPAs (e.g. EM04n01IC002A1) are no longer checked
- * against the CPU name/model
- *
- * Revision 1.3  2005/02/08 12:55:16  kp
- * + support for FPGA long header
- *
- * Revision 1.2  2005/01/14 10:01:02  kp
- * cosmetic
- *
- * Revision 1.1  2004/12/20 08:46:34  kp
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2004 by MEN Mikro Elektronik GmbH, Nuremberg, Germany 
  ******************************************************************************/

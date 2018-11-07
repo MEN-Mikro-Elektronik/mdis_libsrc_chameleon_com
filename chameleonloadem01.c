@@ -11,20 +11,7 @@
  *
  *    \switches   _LITTLE_ENDIAN_ / _BIG_ENDIAN_, MENMON
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: chameleonloadem01.c,v $
- * Revision 2.3  2008/08/27 10:33:19  cs
- * R: fpga loading failed once use of INIT_DONE enabled in FPGA (ERR 0xB4)
- *     - CYCLONE II needs max. 40us from CONFIG_DONE to INIT_DONE (tCD2UM)
- * M: extended wait time before checking INIT_DONE from 20 to 40us
- *
- * Revision 2.2  2005/06/24 08:19:40  kp
- * Copyright line changed (sbo)
- *
- * Revision 2.1  2005/03/16 16:51:06  kp
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2004 by MEN Mikro Elektronik GmbH, Nuremberg, Germany
  ******************************************************************************/

@@ -11,20 +11,7 @@
  *
  *    \switches   _LITTLE_ENDIAN_ / _BIG_ENDIAN_, MENMON
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: chameleonloadep01.c,v $
- * Revision 2.3  2010/04/22 11:03:04  rlange
- * R: Sometimes Fallback is loaded
- * M: Tune timing to get closer on specification timing
- *
- * Revision 2.2  2006/07/12 12:21:27  rla
- * Removed Debugs
- *
- * Revision 2.1  2006/07/11 16:11:37  rla
- * Initial Revision
- *
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2006 by MEN Mikro Elektronik GmbH, Nuremberg, Germany
  ******************************************************************************/

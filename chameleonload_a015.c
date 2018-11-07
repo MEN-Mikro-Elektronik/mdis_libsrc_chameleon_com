@@ -13,24 +13,7 @@
  *
  *    \switches   _LITTLE_ENDIAN_ / _BIG_ENDIAN_, MENMON
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: chameleonload_a015.c,v $
- * Revision 1.4  2006/05/30 08:30:58  ufranke
- * fixed
- *  - FPGA config line is undefined after reset, set it to a defined state first
- *
- * Revision 1.3  2006/01/20 10:23:31  ag
- * fixed: ChameleonLoad_A015 caused exception if Chameleon-Code was absent
- * removed unused variable: MAIN_MenmonGlobalsP
- *
- * Revision 1.2  2003/08/06 13:01:15  kp
- * changed file header for doxygen
- *
- * Revision 1.1  2003/06/10 14:07:11  UFranke
- * Initial Revision
- *
- * clone from chameleonloadem04.c Revision 1.2  2002/09/12 13:46:59
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuremberg, Germany 
  ******************************************************************************/
