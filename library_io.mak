@@ -6,22 +6,8 @@
 #                      
 #    Description: Makefile descriptor file for CHAMELEON lib (io access)
 #                      
-#---------------------------------[ History ]---------------------------------
-#
-#   $Log: library_io.mak,v $
-#   Revision 2.3  2011/09/10 11:42:31  ts
-#   R: build of IO mapped chameleon on F19 failed in vxWorks 6.9
-#   M: added missing Macro definition VX_SYS_IO..
-#
-#   Revision 2.2  2007/07/11 09:32:04  CKauntz
-#   only Chameleon V2 API exported
-#   added CHAMV2_VARIANT
-#
-#   Revision 2.1  2005/04/29 14:45:16  dpfeuffer
-#   Initial Revision
-#
 #-----------------------------------------------------------------------------
-#   (c) Copyright by MEN mikro elektronik GmbH, Nuernberg, Germany 
+#   Copyright (c) 2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

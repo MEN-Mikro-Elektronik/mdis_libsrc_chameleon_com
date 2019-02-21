@@ -17,7 +17,7 @@
 /*---------------------------[ Public Functions ]----------------------------
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2002-2005 by MEN Mikro Elektronik GmbH, Nuremberg, Germany
+ * Copyright (c) 2002-2019, MEN Mikro Elektronik GmbH
  ******************************************************************************/
 /*
  * This program is free software: you can redistribute it and/or modify

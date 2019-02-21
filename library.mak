@@ -6,38 +6,8 @@
 #                      
 #    Description: Makefile descriptor file for CHAMELEON lib
 #                      
-#---------------------------------[ History ]---------------------------------
-#
-#   $Log: library.mak,v $
-#   Revision 1.8  2012/02/08 09:21:58  dpfeuffer
-#   R: compatibility problems under Windows and QNX
-#   M: undo of last modification
-#
-#   Revision 1.7  2011/09/10 11:41:22  ts
-#   R: unresolved externals CHAM_InitMem occured
-#   M: added define for chameleon mem type
-#
-#   Revision 1.6  2007/07/11 09:31:57  CKauntz
-#   only Chameleon V2 API exported
-#   added CHAMV2_VARIANT
-#
-#   Revision 1.5  2005/07/27 11:39:01  dpfeuffer
-#   CHAM_VARIANT=MEM removed due to compatibility problems
-#
-#   Revision 1.4  2005/04/29 14:45:14  dpfeuffer
-#   updated for Chameleon-V2
-#
-#   Revision 1.3  2004/05/26 10:54:09  dpfeuffer
-#   MAK_INCL fixed
-#
-#   Revision 1.2  2004/05/24 11:31:45  dpfeuffer
-#   chameleon_strings.c added
-#
-#   Revision 1.1  2003/02/14 10:49:15  ub
-#   Initial Revision
-#
 #-----------------------------------------------------------------------------
-#   (c) Copyright 2002 by MEN mikro elektronik GmbH, Nuernberg, Germany 
+#   Copyright (c) 2002-2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

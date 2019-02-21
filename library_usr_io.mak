@@ -6,18 +6,8 @@
 #
 #    Description: Makefile descriptor file for CHAMELEON lib (io access)
 #
-#---------------------------------[ History ]---------------------------------
-#
-#   $Log: library_usr_io.mak,v $
-#   Revision 2.2  2007/07/11 09:34:21  CKauntz
-#   only Chameleon V2 API exported
-#   added CHAMV2_VARIANT
-#
-#   Revision 2.1  2005/07/08 17:58:08  cs
-#   Initial Revision
-#
 #-----------------------------------------------------------------------------
-#   (c) Copyright by MEN mikro elektronik GmbH, Nuernberg, Germany
+#   Copyright (c) 2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

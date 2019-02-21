@@ -6,15 +6,8 @@
 #
 #    Description: Makefile descriptor file for CHAMELEON lib
 #
-#---------------------------------[ History ]---------------------------------
-#
-#   $Log: library_sw.mak,v $
-#   Revision 2.1  2007/07/11 10:34:25  CKauntz
-#   Initial Revision
-#
-#
 #-----------------------------------------------------------------------------
-#   (c) Copyright 2002 by MEN mikro elektronik GmbH, Nuernberg, Germany
+#   Copyright (c) 2002-2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
