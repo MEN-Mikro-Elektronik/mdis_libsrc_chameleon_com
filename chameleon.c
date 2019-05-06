@@ -117,7 +117,7 @@ of the library!</b>
 
  */
 
-/*! \page dummy
+/*! \page chameleondummy MEN logo
  \menimages
 */
 
