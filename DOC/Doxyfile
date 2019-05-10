@@ -3,9 +3,9 @@
 
 PROJECT_NAME           = "Chameleon Library"
 PROJECT_NUMBER         = $(MEN_FILESET_REVISION)
-INPUT                  = $(MEN_COM_INC)/MEN/chameleon.h \
-                         ../COM \
-                         ../UNITTEST/COM/cha_ut.c
+INPUT                  = ../ \
+                         $(MEN_COM_INC)/MEN/chameleon.h
+
 OUTPUT_DIRECTORY       = .
 EXTRACT_ALL            = NO
 EXTRACT_STATIC         = NO
@@ -15,9 +15,6 @@ WARN_IF_DOC_ERROR      = YES
 WARN_IF_UNDOCUMENTED   = YES
 GENERATE_HTMLHELP      = YES
 PREDEFINED             = _DOXYGEN_ CHAMELEONV2_EXPORT_CHAMELEONV0
-
 GENERATE_TAGFILE       = chameleon.tag
-
 EXAMPLE_RECURSIVE      = YES
 EXAMPLE_PATH           = ../UNITTEST/COM
-						 
