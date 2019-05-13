@@ -2,7 +2,7 @@
 @INCLUDE = DoxyfileCommon
 
 PROJECT_NAME           = "Chameleon Library"
-PROJECT_NUMBER         = $(MEN_FILESET_REVISION)
+PROJECT_NUMBER         = 
 INPUT                  = ../ \
                          $(MEN_COM_INC)/MEN/chameleon.h
 
