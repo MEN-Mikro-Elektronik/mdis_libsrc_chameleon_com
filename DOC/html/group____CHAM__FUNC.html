@@ -11,8 +11,8 @@
 
 <div class="left_to_right" style="padding-top: 6px; background-color: #F0F0F0; height: 110px; border-bottom: 2px solid #D1D1D2;">
 	<!-- Titel -->
-	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;"></a>
-	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">Chameleon Library &nbsp; 1.31</h1>
+	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;">
+	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">Chameleon Library &nbsp; </h1>
 	<h3>Chameleon-V0 Functions</h3>
 </div>
 
@@ -24,30 +24,34 @@
 <h1>Chameleon-V0 Functions</h1><table border=0 cellpadding=0 cellspacing=0>
 <tr><td></td></tr>
 <tr><td colspan=2><br><h2>Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a0">ChameleonTerm</a> (CHAMELEON_HANDLE **)</td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>CHAMELEONV0_STATIC_EXTERN void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a0">ChameleonTerm</a> (CHAMELEON_HANDLE **chahP)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to teminate Chameleon device It destroys the handle for that device and free the memory and sets the contents of *chahP to NULL </em> <a href="#a0"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a1">ChameleonInit</a> (OSS_HANDLE *, int pciBus, int pciDev, CHAMELEON_HANDLE **)</td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>CHAMELEONV0_STATIC_EXTERN <br>
+int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a1">ChameleonInit</a> (OSS_HANDLE *osh, int pciBus, int pciDev, CHAMELEON_HANDLE **chahP)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to init Chameleon device </em> <a href="#a1"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a2">ChameleonGlobalIdent</a> (CHAMELEON_HANDLE *, char *variantP, int *revisionP)</td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>CHAMELEONV0_STATIC_EXTERN <br>
+int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a2">ChameleonGlobalIdent</a> (CHAMELEON_HANDLE *h, char *variantP, int *revisionP)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to get Chameleon global device info </em> <a href="#a2"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a3">ChameleonUnitIdent</a> (CHAMELEON_HANDLE *, int idx, <a class="el" href="structCHAMELEON__UNIT.html">CHAMELEON_UNIT</a> *)</td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>CHAMELEONV0_STATIC_EXTERN <br>
+int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a3">ChameleonUnitIdent</a> (CHAMELEON_HANDLE *h, int idx, <a class="el" href="structCHAMELEON__UNIT.html">CHAMELEON_UNIT</a> *info)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retrieve information about specified unit. </em> <a href="#a3"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a4">ChameleonUnitFind</a> (CHAMELEON_HANDLE *, int modCode, int instance, <a class="el" href="structCHAMELEON__UNIT.html">CHAMELEON_UNIT</a> *)</td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>CHAMELEONV0_STATIC_EXTERN <br>
+int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a4">ChameleonUnitFind</a> (CHAMELEON_HANDLE *h, int modCode, int instance, <a class="el" href="structCHAMELEON__UNIT.html">CHAMELEON_UNIT</a> *info)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Search configuration table for unit. </em> <a href="#a4"></a><em><br><br></td></tr>
 </table>
 <hr><h2>Function Documentation</h2>
-<a name="a2" doxytag="chameleon.h::ChameleonGlobalIdent"></a><p>
+<a name="a2" doxytag="chameleon.c::ChameleonGlobalIdent"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td class="md" nowrap valign="top"> int32 ChameleonGlobalIdent </td>
+          <td class="md" nowrap valign="top"> CHAMELEONV0_STATIC_EXTERN int32 ChameleonGlobalIdent </td>
           <td class="md" valign="top">(&nbsp;</td>
           <td class="md" nowrap valign="top">CHAMELEON_HANDLE *&nbsp;</td>
           <td class="mdname" nowrap> <em>h</em>, </td>
@@ -96,13 +100,13 @@ It retrieves the global variant and revision of the FPGA code.<p>
     </td>
   </tr>
 </table>
-<a name="a1" doxytag="chameleon.h::ChameleonInit"></a><p>
+<a name="a1" doxytag="chameleon.c::ChameleonInit"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td class="md" nowrap valign="top"> int32 ChameleonInit </td>
+          <td class="md" nowrap valign="top"> CHAMELEONV0_STATIC_EXTERN int32 ChameleonInit </td>
           <td class="md" valign="top">(&nbsp;</td>
           <td class="md" nowrap valign="top">OSS_HANDLE *&nbsp;</td>
           <td class="mdname" nowrap> <em>osh</em>, </td>
@@ -162,13 +166,13 @@ This routine<ul>
     </td>
   </tr>
 </table>
-<a name="a0" doxytag="chameleon.h::ChameleonTerm"></a><p>
+<a name="a0" doxytag="chameleon.c::ChameleonTerm"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td class="md" nowrap valign="top"> void ChameleonTerm </td>
+          <td class="md" nowrap valign="top"> CHAMELEONV0_STATIC_EXTERN void ChameleonTerm </td>
           <td class="md" valign="top">(&nbsp;</td>
           <td class="md" nowrap valign="top">CHAMELEON_HANDLE **&nbsp;</td>
           <td class="mdname1" valign="top" nowrap> <em>chahP</em>          </td>
@@ -199,13 +203,13 @@ routine to teminate Chameleon device It destroys the handle for that device and 
     </td>
   </tr>
 </table>
-<a name="a4" doxytag="chameleon.h::ChameleonUnitFind"></a><p>
+<a name="a4" doxytag="chameleon.c::ChameleonUnitFind"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td class="md" nowrap valign="top"> int32 ChameleonUnitFind </td>
+          <td class="md" nowrap valign="top"> CHAMELEONV0_STATIC_EXTERN int32 ChameleonUnitFind </td>
           <td class="md" valign="top">(&nbsp;</td>
           <td class="md" nowrap valign="top">CHAMELEON_HANDLE *&nbsp;</td>
           <td class="mdname" nowrap> <em>h</em>, </td>
@@ -263,13 +267,13 @@ Searches the configuration table for the specified module code and instance numb
     </td>
   </tr>
 </table>
-<a name="a3" doxytag="chameleon.h::ChameleonUnitIdent"></a><p>
+<a name="a3" doxytag="chameleon.c::ChameleonUnitIdent"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td class="md" nowrap valign="top"> int32 ChameleonUnitIdent </td>
+          <td class="md" nowrap valign="top"> CHAMELEONV0_STATIC_EXTERN int32 ChameleonUnitIdent </td>
           <td class="md" valign="top">(&nbsp;</td>
           <td class="md" nowrap valign="top">CHAMELEON_HANDLE *&nbsp;</td>
           <td class="mdname" nowrap> <em>h</em>, </td>
@@ -326,7 +330,7 @@ Retrieve information about the unit at index <em>idx</em> in the FPGA configurat
 <!-- Footer -->
 	<p class="footer">
 	Generated for Chameleon Library using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2014 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Copyright &copy; 2019 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
 	</p>
 </div>
 

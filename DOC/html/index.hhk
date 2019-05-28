@@ -143,16 +143,18 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html"><param name="Name" value="chameleon.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a173"><param name="Name" value="ChameleonFpgaCodeIdentEm04"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a181"><param name="Name" value="ChameleonFpgaDataCheckXor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a180"><param name="Name" value="ChameleonFpgaDataXor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a179"><param name="Name" value="ChameleonFpgaHeaderIdent"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a182"><param name="Name" value="ChameleonFpgaHeaderOkForBoard"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a174"><param name="Name" value="ChameleonLoad_A015"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a170"><param name="Name" value="ChameleonLoadEm03"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a172"><param name="Name" value="ChameleonLoadEm04"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a140"><param name="Name" value="CHAMELEONV2_FILENAME_SIZE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a161"><param name="Name" value="CHAMELEONV2_HANDLE"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a150"><param name="Name" value="ChameleonFpgaCodeIdentEm04"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a158"><param name="Name" value="ChameleonFpgaDataCheckXor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a157"><param name="Name" value="ChameleonFpgaDataXor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a156"><param name="Name" value="ChameleonFpgaHeaderIdent"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a159"><param name="Name" value="ChameleonFpgaHeaderOkForBoard"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a151"><param name="Name" value="ChameleonLoad_A015"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a145"><param name="Name" value="ChameleonLoadEm01"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a147"><param name="Name" value="ChameleonLoadEm03"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a149"><param name="Name" value="ChameleonLoadEm04"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a146"><param name="Name" value="ChameleonLoadEp01"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a117"><param name="Name" value="CHAMELEONV2_FILENAME_SIZE"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a138"><param name="Name" value="CHAMELEONV2_HANDLE"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="CHAMELEON_MAGIC_00"><param name="Name" value="CHAMELEON_MAGIC_00"></OBJECT>
   <UL>
@@ -178,27 +180,27 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonFpgaCodeIdentEm04"><param name="Name" value="ChameleonFpgaCodeIdentEm04"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a173"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a150"><param name="Name" value="chameleon.h"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadem04_8c.html#a11"><param name="Name" value="chameleonloadem04.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonFpgaDataCheckXor"><param name="Name" value="ChameleonFpgaDataCheckXor"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a181"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a158"><param name="Name" value="chameleon.h"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="fpgaheader_8c.html#a10"><param name="Name" value="fpgaheader.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonFpgaDataXor"><param name="Name" value="ChameleonFpgaDataXor"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a180"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a157"><param name="Name" value="chameleon.h"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="fpgaheader_8c.html#a9"><param name="Name" value="fpgaheader.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonFpgaHeaderIdent"><param name="Name" value="ChameleonFpgaHeaderIdent"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a179"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a156"><param name="Name" value="chameleon.h"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="fpgaheader_8c.html#a8"><param name="Name" value="fpgaheader.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonFpgaHeaderOkForBoard"><param name="Name" value="ChameleonFpgaHeaderOkForBoard"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a182"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a159"><param name="Name" value="chameleon.h"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="fpgaheader_8c.html#a13"><param name="Name" value="fpgaheader.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonGlobalIdent"><param name="Name" value="ChameleonGlobalIdent"></OBJECT>
@@ -215,8 +217,17 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonLoad_A015"><param name="Name" value="ChameleonLoad_A015"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a174"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a151"><param name="Name" value="chameleon.h"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonload__a015_8c.html#a13"><param name="Name" value="chameleonload_a015.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadem01_8c.html"><param name="Name" value="chameleonloadem01.c"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadem01_8c.html#a2"><param name="Name" value="ChameleonLoadEm01"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonLoadEm01"><param name="Name" value="ChameleonLoadEm01"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a145"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadem01_8c.html#a2"><param name="Name" value="chameleonloadem01.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadem03_8c.html"><param name="Name" value="chameleonloadem03.c"></OBJECT>
   <UL>
@@ -224,7 +235,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonLoadEm03"><param name="Name" value="ChameleonLoadEm03"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a170"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a147"><param name="Name" value="chameleon.h"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadem03_8c.html#a6"><param name="Name" value="chameleonloadem03.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadem04_8c.html"><param name="Name" value="chameleonloadem04.c"></OBJECT>
@@ -234,8 +245,17 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonLoadEm04"><param name="Name" value="ChameleonLoadEm04"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a172"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a149"><param name="Name" value="chameleon.h"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadem04_8c.html#a12"><param name="Name" value="chameleonloadem04.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadep01_8c.html"><param name="Name" value="chameleonloadep01.c"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadep01_8c.html#a2"><param name="Name" value="ChameleonLoadEp01"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonLoadEp01"><param name="Name" value="ChameleonLoadEp01"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a146"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleonloadep01_8c.html#a2"><param name="Name" value="chameleonloadep01.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChameleonModName"><param name="Name" value="ChameleonModName"></OBJECT>
   <UL>
@@ -329,7 +349,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="CHAMELEONV2_FILENAME_SIZE"><param name="Name" value="CHAMELEONV2_FILENAME_SIZE"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a140"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a117"><param name="Name" value="chameleon.h"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structCHAMELEONV2__FIND.html"><param name="Name" value="CHAMELEONV2_FIND"></OBJECT>
   <UL>
@@ -343,7 +363,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="CHAMELEONV2_HANDLE"><param name="Name" value="CHAMELEONV2_HANDLE"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a161"><param name="Name" value="chameleon.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="chameleon_8h.html#a138"><param name="Name" value="chameleon.h"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="CHAMELEONV2_HANDLE_ILL"><param name="Name" value="CHAMELEONV2_HANDLE_ILL"></OBJECT>
   <UL>

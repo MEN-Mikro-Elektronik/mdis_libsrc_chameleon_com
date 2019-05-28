@@ -11,8 +11,8 @@
 
 <div class="left_to_right" style="padding-top: 6px; background-color: #F0F0F0; height: 110px; border-bottom: 2px solid #D1D1D2;">
 	<!-- Titel -->
-	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;"></a>
-	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">Chameleon Library &nbsp; 1.31</h1>
+	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;">
+	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">Chameleon Library &nbsp; </h1>
 	<h3>chameleon.h File Reference</h3>
 </div>
 
@@ -104,73 +104,77 @@
 
 <tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAMV2__FF.html#a0">CHAMELEONV2_FF_BRGALL</a>&nbsp;&nbsp;&nbsp;0x0001</td></tr>
 
-<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a140">CHAMELEONV2_FILENAME_SIZE</a>&nbsp;&nbsp;&nbsp;13</td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>#define&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a117">CHAMELEONV2_FILENAME_SIZE</a>&nbsp;&nbsp;&nbsp;13</td></tr>
 
 <tr><td colspan=2><br><h2>Typedefs</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>typedef void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a161">CHAMELEONV2_HANDLE</a></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>typedef void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a138">CHAMELEONV2_HANDLE</a></td></tr>
 
 <tr><td colspan=2><br><h2>Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a1">ChameleonInit</a> (OSS_HANDLE *, int pciBus, int pciDev, CHAMELEON_HANDLE **)</td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a140">ChameleonInit</a> (OSS_HANDLE *, int pciBus, int pciDev, CHAMELEON_HANDLE **)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to init Chameleon device </em> <a href="group____CHAM__FUNC.html#a1"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a2">ChameleonGlobalIdent</a> (CHAMELEON_HANDLE *, char *variantP, int *revisionP)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to init Chameleon device </em> <a href="group____CHAM__FUNC.html#a140"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a141">ChameleonGlobalIdent</a> (CHAMELEON_HANDLE *, char *variantP, int *revisionP)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to get Chameleon global device info </em> <a href="group____CHAM__FUNC.html#a2"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a3">ChameleonUnitIdent</a> (CHAMELEON_HANDLE *, int idx, <a class="el" href="structCHAMELEON__UNIT.html">CHAMELEON_UNIT</a> *)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to get Chameleon global device info </em> <a href="group____CHAM__FUNC.html#a141"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a142">ChameleonUnitIdent</a> (CHAMELEON_HANDLE *, int idx, <a class="el" href="structCHAMELEON__UNIT.html">CHAMELEON_UNIT</a> *)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retrieve information about specified unit. </em> <a href="group____CHAM__FUNC.html#a3"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a4">ChameleonUnitFind</a> (CHAMELEON_HANDLE *, int modCode, int instance, <a class="el" href="structCHAMELEON__UNIT.html">CHAMELEON_UNIT</a> *)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retrieve information about specified unit. </em> <a href="group____CHAM__FUNC.html#a142"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a143">ChameleonUnitFind</a> (CHAMELEON_HANDLE *, int modCode, int instance, <a class="el" href="structCHAMELEON__UNIT.html">CHAMELEON_UNIT</a> *)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Search configuration table for unit. </em> <a href="group____CHAM__FUNC.html#a4"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a0">ChameleonTerm</a> (CHAMELEON_HANDLE **)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Search configuration table for unit. </em> <a href="group____CHAM__FUNC.html#a143"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>void&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__FUNC.html#a144">ChameleonTerm</a> (CHAMELEON_HANDLE **)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to teminate Chameleon device It destroys the handle for that device and free the memory and sets the contents of *chahP to NULL </em> <a href="group____CHAM__FUNC.html#a0"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a170">ChameleonLoadEm03</a> (OSS_HANDLE *osh, const FPGA_HEADER *fpgaCode, void *pldRegBase)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to teminate Chameleon device It destroys the handle for that device and free the memory and sets the contents of *chahP to NULL </em> <a href="group____CHAM__FUNC.html#a144"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a145">ChameleonLoadEm01</a> (OSS_HANDLE *osh, const FPGA_HEADER *fpgaCode, void *pldRegBase)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to load the FPGA code into the EM03's chameleon FPGA </em> <a href="#a170"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a172">ChameleonLoadEm04</a> (OSS_HANDLE *osh, const FPGA_HEADER *fpgaCode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to load the FPGA code into the EM01's chameleon FPGA </em> <a href="#a145"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a146">ChameleonLoadEp01</a> (OSS_HANDLE *osh, const FPGA_HEADER *fpgaCode, void *pldRegBase)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to load the FPGA code into the EM04's chameleon FPGA </em> <a href="#a172"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a173">ChameleonFpgaCodeIdentEm04</a> (const FPGA_HEADER *fpgaCode, int *variantP, int *revisionP)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to load the FPGA code into the EP01's chameleon FPGA </em> <a href="#a146"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a147">ChameleonLoadEm03</a> (OSS_HANDLE *osh, const FPGA_HEADER *fpgaCode, void *pldRegBase)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">identify FPGA code in memory, check everything but code XOR </em> <a href="#a173"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a174">ChameleonLoad_A015</a> (OSS_HANDLE *osh, int icNumber, const FPGA_HEADER *fpgaCode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to load the FPGA code into the EM03's chameleon FPGA </em> <a href="#a147"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a149">ChameleonLoadEm04</a> (OSS_HANDLE *osh, const FPGA_HEADER *fpgaCode)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to load the FPGA code into the EM04's chameleon FPGA </em> <a href="#a174"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>const char *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__CODE__FUNC.html#a0">ChameleonModName</a> (u_int16 modCode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to load the FPGA code into the EM04's chameleon FPGA </em> <a href="#a149"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a150">ChameleonFpgaCodeIdentEm04</a> (const FPGA_HEADER *fpgaCode, int *variantP, int *revisionP)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">convert module-code to unit name </em> <a href="group____CHAM__CODE__FUNC.html#a0"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>const char *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__CODE__FUNC.html#a1">CHAM_DevIdToName</a> (u_int16 devId)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">identify FPGA code in memory, check everything but code XOR </em> <a href="#a150"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a151">ChameleonLoad_A015</a> (OSS_HANDLE *osh, int icNumber, const FPGA_HEADER *fpgaCode)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">convert device-Id to unit name </em> <a href="group____CHAM__CODE__FUNC.html#a1"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>u_int16&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__CODE__FUNC.html#a2">CHAM_ModCodeToDevId</a> (u_int16 modCode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">routine to load the FPGA code into the EM04's chameleon FPGA </em> <a href="#a151"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const char *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__CODE__FUNC.html#a152">ChameleonModName</a> (u_int16 modCode)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">convert module-code to device-Id </em> <a href="group____CHAM__CODE__FUNC.html#a2"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>u_int16&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__CODE__FUNC.html#a3">CHAM_DevIdToModCode</a> (u_int16 devId)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">convert module-code to unit name </em> <a href="group____CHAM__CODE__FUNC.html#a152"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>const char *&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__CODE__FUNC.html#a153">CHAM_DevIdToName</a> (u_int16 devId)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">convert device-Id to module-code </em> <a href="group____CHAM__CODE__FUNC.html#a3"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a179">ChameleonFpgaHeaderIdent</a> (const void *_hdr, u_int32 maxSize, <a class="el" href="structFPGA__HEADER__INFO.html">FPGA_HEADER_INFO</a> *info)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">convert device-Id to unit name </em> <a href="group____CHAM__CODE__FUNC.html#a153"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>u_int16&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__CODE__FUNC.html#a154">CHAM_ModCodeToDevId</a> (u_int16 modCode)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">identify FPGA header in memory, check everything but code XOR </em> <a href="#a179"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a180">ChameleonFpgaDataXor</a> (const u_int32 *p, u_int32 nBytes, u_int32 *xorP)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">convert module-code to device-Id </em> <a href="group____CHAM__CODE__FUNC.html#a154"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>u_int16&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="group____CHAM__CODE__FUNC.html#a155">CHAM_DevIdToModCode</a> (u_int16 devId)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compute 32 Bit XOR over a data block. </em> <a href="#a180"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a181">ChameleonFpgaDataCheckXor</a> (<a class="el" href="structFPGA__HEADER__INFO.html">FPGA_HEADER_INFO</a> *info)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">convert device-Id to module-code </em> <a href="group____CHAM__CODE__FUNC.html#a155"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a156">ChameleonFpgaHeaderIdent</a> (const void *_hdr, u_int32 maxSize, <a class="el" href="structFPGA__HEADER__INFO.html">FPGA_HEADER_INFO</a> *info)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check XOR of FPGA data. </em> <a href="#a181"></a><em><br><br></td></tr>
-<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a182">ChameleonFpgaHeaderOkForBoard</a> (const <a class="el" href="structFPGA__HEADER__INFO.html">FPGA_HEADER_INFO</a> *info, const char *mainProductName, const char *carrierName)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">identify FPGA header in memory, check everything but code XOR </em> <a href="#a156"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a157">ChameleonFpgaDataXor</a> (const u_int32 *p, u_int32 nBytes, u_int32 *xorP)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if FPGA header filename is ok for board. </em> <a href="#a182"></a><em><br><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compute 32 Bit XOR over a data block. </em> <a href="#a157"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a158">ChameleonFpgaDataCheckXor</a> (<a class="el" href="structFPGA__HEADER__INFO.html">FPGA_HEADER_INFO</a> *info)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check XOR of FPGA data. </em> <a href="#a158"></a><em><br><br></td></tr>
+<tr><td class="memItemLeft" nowrap align=right valign=top>int32&nbsp;</td><td class="memItemRight" valign=bottom><a class="el" href="chameleon_8h.html#a159">ChameleonFpgaHeaderOkForBoard</a> (const <a class="el" href="structFPGA__HEADER__INFO.html">FPGA_HEADER_INFO</a> *info, const char *mainProductName, const char *carrierName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if FPGA header filename is ok for board. </em> <a href="#a159"></a><em><br><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Header file for chameleon (flexible FPGA) library. 
 <p>
-<dl compact><dt><b>Author:</b></dt><dd>kp <dl compact><dt><b>Date</b></dt><dd>2014/02/19 12:41:26 </dd></dl>
-<dl compact><dt><b>Revision</b></dt><dd>3.35 </dd></dl>
-</dd></dl>
+<dl compact><dt><b>Author:</b></dt><dd>kp and others</dd></dl>
 <p>
 Switches: CHAMELEON_CODES_ONLY - if set, don't include typedefs and prototypes<hr><h2>Define Documentation</h2>
-<a name="a140" doxytag="chameleon.h::CHAMELEONV2_FILENAME_SIZE"></a><p>
+<a name="a117" doxytag="chameleon.h::CHAMELEONV2_FILENAME_SIZE"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
@@ -193,13 +197,13 @@ length of FPGA filename including terminating null character     </td>
   </tr>
 </table>
 <hr><h2>Typedef Documentation</h2>
-<a name="a161" doxytag="chameleon.h::CHAMELEONV2_HANDLE"></a><p>
+<a name="a138" doxytag="chameleon.h::CHAMELEONV2_HANDLE"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td class="md" nowrap valign="top"> typedef void <a class="el" href="chameleon_8h.html#a161">CHAMELEONV2_HANDLE</a>
+          <td class="md" nowrap valign="top"> typedef void <a class="el" href="chameleon_8h.html#a138">CHAMELEONV2_HANDLE</a>
       </table>
     </td>
   </tr>
@@ -216,7 +220,7 @@ length of FPGA filename including terminating null character     </td>
   </tr>
 </table>
 <hr><h2>Function Documentation</h2>
-<a name="a173" doxytag="chameleon.h::ChameleonFpgaCodeIdentEm04"></a><p>
+<a name="a150" doxytag="chameleon.h::ChameleonFpgaCodeIdentEm04"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
@@ -272,7 +276,7 @@ Also compute variant code and revision code from FPGA code name<p>
     </td>
   </tr>
 </table>
-<a name="a181" doxytag="chameleon.h::ChameleonFpgaDataCheckXor"></a><p>
+<a name="a158" doxytag="chameleon.h::ChameleonFpgaDataCheckXor"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
@@ -304,7 +308,7 @@ Check XOR of FPGA data.
     </td>
   </tr>
 </table>
-<a name="a180" doxytag="chameleon.h::ChameleonFpgaDataXor"></a><p>
+<a name="a157" doxytag="chameleon.h::ChameleonFpgaDataXor"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
@@ -358,7 +362,7 @@ Compute 32 Bit XOR over a data block.
     </td>
   </tr>
 </table>
-<a name="a179" doxytag="chameleon.h::ChameleonFpgaHeaderIdent"></a><p>
+<a name="a156" doxytag="chameleon.h::ChameleonFpgaHeaderIdent"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
@@ -418,7 +422,7 @@ Valid for formats:<p>
     </td>
   </tr>
 </table>
-<a name="a182" doxytag="chameleon.h::ChameleonFpgaHeaderOkForBoard"></a><p>
+<a name="a159" doxytag="chameleon.h::ChameleonFpgaHeaderOkForBoard"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
@@ -464,7 +468,7 @@ Check if FPGA header filename is ok for board.
 uses info-&gt;boardType and info-&gt;cBoardType for checking<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign=top><em>info</em>&nbsp;</td><td><b>IN</b> info from <a class="el" href="chameleon_8h.html#a179">ChameleonFpgaHeaderIdent()</a> </td></tr>
+    <tr><td valign=top><em>info</em>&nbsp;</td><td><b>IN</b> info from <a class="el" href="chameleon_8h.html#a156">ChameleonFpgaHeaderIdent()</a> </td></tr>
     <tr><td valign=top><em>mainProductName</em>&nbsp;</td><td><b>IN</b> name of product to check (chars 3..9 of MEN product name) (NULL or "" if unknown) </td></tr>
     <tr><td valign=top><em>carrierName</em>&nbsp;</td><td><b>IN</b> name of carrier to check (chars 3..7) of MEN product name) (NULL or "" if unknown). Will be checked for old header filename format.</td></tr>
   </table>
@@ -473,7 +477,7 @@ uses info-&gt;boardType and info-&gt;cBoardType for checking<p>
     </td>
   </tr>
 </table>
-<a name="a174" doxytag="chameleon.h::ChameleonLoad_A015"></a><p>
+<a name="a151" doxytag="chameleon.h::ChameleonLoad_A015"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
@@ -518,7 +522,7 @@ routine to load the FPGA code into the EM04's chameleon FPGA
 <p>
 This routine (re)loads the FPGA on EM04 with the code specified with <em>fpgaCode</em>.<p>
 The FPGA header magic and the FPGA code's XOR checksum is checked<p>
-This routine can be called without calling <a class="el" href="group____CHAM__FUNC.html#a1">ChameleonInit()</a> before loading.<p>
+This routine can be called without calling <a class="el" href="group____CHAM__FUNC.html#a140">ChameleonInit()</a> before loading.<p>
 Since this routine accesses the RCS2 latch, the calling routine must allow (setup MMU or BATs) access to the latch.<p>
 OSS_MikroDelayInit() must have been called before. I <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
@@ -531,7 +535,66 @@ OSS_MikroDelayInit() must have been called before. I <dl compact><dt><b>Paramete
     </td>
   </tr>
 </table>
-<a name="a170" doxytag="chameleon.h::ChameleonLoadEm03"></a><p>
+<a name="a145" doxytag="chameleon.h::ChameleonLoadEm01"></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int32 ChameleonLoadEm01 </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">OSS_HANDLE *&nbsp;</td>
+          <td class="mdname" nowrap> <em>osh</em>, </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class="md" nowrap>const FPGA_HEADER *&nbsp;</td>
+          <td class="mdname" nowrap> <em>fpgaCode</em>, </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class="md" nowrap>void *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pldRegBase</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+routine to load the FPGA code into the EM01's chameleon FPGA 
+<p>
+This routine (re)loads the FPGA on EM01 with the code specified with <em>fpgaCode</em>.<p>
+The FPGA header magic and the FPGA code's XOR checksum is checked<p>
+This routine can be called without calling <a class="el" href="group____CHAM__FUNC.html#a140">ChameleonInit()</a> before loading.<p>
+Since this routine accesses the CPLD, the calling routine must allow (setup MMU or BATs) access to the CPLD (CS1).<p>
+OSS_MikroDelayInit() must have been called before.<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>osh</em>&nbsp;</td><td>OSS handle </td></tr>
+    <tr><td valign=top><em>fpgaCode</em>&nbsp;</td><td>FPGA header followed by code (generated with fpga_addheader) </td></tr>
+    <tr><td valign=top><em>pldRegBase</em>&nbsp;</td><td>register base of PLD (CS1)</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Returns:</b></dt><dd>0=ok, or error number CHAMELEON_xxx </dd></dl>
+    </td>
+  </tr>
+</table>
+<a name="a147" doxytag="chameleon.h::ChameleonLoadEm03"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
@@ -576,7 +639,7 @@ routine to load the FPGA code into the EM03's chameleon FPGA
 <p>
 This routine (re)loads the FPGA on EM03 with the code specified with <em>fpgaCode</em>.<p>
 The FPGA header magic and the FPGA code's XOR checksum is checked<p>
-This routine can be called without calling <a class="el" href="group____CHAM__FUNC.html#a1">ChameleonInit()</a> before loading.<p>
+This routine can be called without calling <a class="el" href="group____CHAM__FUNC.html#a140">ChameleonInit()</a> before loading.<p>
 Since this routine accesses the RCS2 latch, the calling routine must allow (setup MMU or BATs) access to the latch.<p>
 OSS_MikroDelayInit() must have been called before.<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
@@ -590,7 +653,7 @@ OSS_MikroDelayInit() must have been called before.<p>
     </td>
   </tr>
 </table>
-<a name="a172" doxytag="chameleon.h::ChameleonLoadEm04"></a><p>
+<a name="a149" doxytag="chameleon.h::ChameleonLoadEm04"></a><p>
 <table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
   <tr>
     <td class="mdRow">
@@ -629,13 +692,72 @@ routine to load the FPGA code into the EM04's chameleon FPGA
 <p>
 This routine (re)loads the FPGA on EM04 with the code specified with <em>fpgaCode</em>.<p>
 The FPGA header magic and the FPGA code's XOR checksum is checked<p>
-This routine can be called without calling <a class="el" href="group____CHAM__FUNC.html#a1">ChameleonInit()</a> before loading.<p>
+This routine can be called without calling <a class="el" href="group____CHAM__FUNC.html#a140">ChameleonInit()</a> before loading.<p>
 Since this routine accesses the RCS2 latch, the calling routine must allow (setup MMU or BATs) access to the latch.<p>
 OSS_MikroDelayInit() must have been called before.<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign=top><em>osh</em>&nbsp;</td><td>OSS handle </td></tr>
     <tr><td valign=top><em>fpgaCode</em>&nbsp;</td><td>FPGA header followed by code (generated with fpga_addheader)</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Returns:</b></dt><dd>0=ok, or error number CHAMELEON_xxx </dd></dl>
+    </td>
+  </tr>
+</table>
+<a name="a146" doxytag="chameleon.h::ChameleonLoadEp01"></a><p>
+<table class="mdTable" width="100%" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> int32 ChameleonLoadEp01 </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">OSS_HANDLE *&nbsp;</td>
+          <td class="mdname" nowrap> <em>osh</em>, </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class="md" nowrap>const FPGA_HEADER *&nbsp;</td>
+          <td class="mdname" nowrap> <em>fpgaCode</em>, </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class="md" nowrap>void *&nbsp;</td>
+          <td class="mdname" nowrap> <em>pldRegBase</em></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+routine to load the FPGA code into the EP01's chameleon FPGA 
+<p>
+This routine (re)loads the FPGA on EP01 with the code specified with <em>fpgaCode</em>.<p>
+The FPGA header magic and the FPGA code's XOR checksum is checked<p>
+This routine can be called without calling <a class="el" href="group____CHAM__FUNC.html#a140">ChameleonInit()</a> before loading.<p>
+Since this routine accesses the CPLD, the calling routine must allow (setup MMU or BATs) access to the CPLD (CS1).<p>
+OSS_MikroDelayInit() must have been called before.<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign=top><em>osh</em>&nbsp;</td><td>OSS handle </td></tr>
+    <tr><td valign=top><em>fpgaCode</em>&nbsp;</td><td>FPGA header followed by code (generated with fpga_addheader) </td></tr>
+    <tr><td valign=top><em>pldRegBase</em>&nbsp;</td><td>register base of PLD (CS1)</td></tr>
   </table>
 </dl>
 <dl compact><dt><b>Returns:</b></dt><dd>0=ok, or error number CHAMELEON_xxx </dd></dl>
@@ -650,7 +772,7 @@ OSS_MikroDelayInit() must have been called before.<p>
 <!-- Footer -->
 	<p class="footer">
 	Generated for Chameleon Library using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2014 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Copyright &copy; 2019 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
 	</p>
 </div>
 
