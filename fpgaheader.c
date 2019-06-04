@@ -3,8 +3,6 @@
  *        \file  fpgaheader.c
  *
  *      \author  klaus.popp@men.de/rene.lange@men.de
- *        $Date: 2005/06/23 16:12:09 $
- *    $Revision: 1.5 $
  * 
  *	   \project  -
  *  	 \brief  Routines to parse and interpret MEN (chameleon) FPGA 

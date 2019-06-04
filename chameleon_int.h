@@ -3,8 +3,6 @@
  *         \file chameleon_int.h
  *
  *       \author dieter.pfeuffer@men.de
- *        $Date: 2009/03/17 15:21:11 $
- *    $Revision: 2.9 $
  *
  *        \brief Internal header file for chameleon library
  *

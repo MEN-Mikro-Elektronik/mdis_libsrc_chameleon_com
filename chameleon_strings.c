@@ -3,8 +3,6 @@
  *        \file  chameleon_strings.c
  *
  *      \author  kp
- *        $Date: 2008/03/31 11:31:36 $
- *    $Revision: 2.21 $
  *
  *        \brief  String routines for chameleon library
  *

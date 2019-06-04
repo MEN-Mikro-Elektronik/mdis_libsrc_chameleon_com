@@ -3,8 +3,6 @@
  *        \file  chameleonloadem03.c
  *
  *      \author  klaus.popp@men.de/rene.lange@men.de
- *        $Date: 2008/08/27 10:34:38 $
- *    $Revision: 2.2 $
  *
  *	   \project  EM03
  *  	 \brief  load routine for FPGA on EM03

@@ -3,8 +3,6 @@
  *        \file  chameleon.c
  *
  *      \author  rla
- *        $Date: 2015/10/20 08:45:58 $
- *    $Revision: 1.27 $
  *
  *        \brief  routines for chameleon library
  *

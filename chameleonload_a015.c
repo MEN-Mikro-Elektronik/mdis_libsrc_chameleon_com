@@ -3,8 +3,6 @@
  *        \file  chameleonload_a015.c
  *
  *      \author  ulf.franke@men.de
- *        $Date: 2006/05/30 08:30:58 $
- *    $Revision: 1.4 $
  * 
  *	   \project  A015
  *  	 \brief  load routine for FPGA's on A15

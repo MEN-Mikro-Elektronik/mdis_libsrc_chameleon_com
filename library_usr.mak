@@ -1,8 +1,6 @@
 #***************************  M a k e f i l e  *******************************
 #
 #         Author: cs
-#          $Date: 2007/07/11 09:34:09 $
-#      $Revision: 2.2 $
 #
 #    Description: Makefile descriptor file for CHAMELEON lib
 #
@@ -24,6 +22,10 @@
 
 
 MAK_NAME=chameleon_usr
+# the next line is updated during the MDIS installation
+STAMPED_REVISION="mdis_libsrc_chameleon_com_03_02-7-g8c0e50d-dirty_2019-05-28"
+
+DEF_REVISION=MAK_REVISION=$(STAMPED_REVISION)
 
 MAK_INCL=$(MEN_MOD_DIR)/chameleon_int.h \
 		 $(MEN_MOD_DIR)/chameleon.c     \
@@ -33,6 +35,7 @@ MAK_INCL=$(MEN_MOD_DIR)/chameleon_int.h \
 		 $(MEN_INC_DIR)/oss.h
 
 MAK_SWITCH=$(SW_PREFIX)MAC_MEM_MAPPED \
+		$(SW_PREFIX)$(DEF_REVISION) \
            $(SW_PREFIX)CHAMV2_VARIANT=Mem \
            $(SW_PREFIX)MAC_USERSPACE
 

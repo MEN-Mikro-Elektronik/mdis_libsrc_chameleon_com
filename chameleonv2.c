@@ -3,8 +3,6 @@
  *        \file  chameleonv2.c
  *
  *      \author  dieter.pfeuffer@men.de
- *        $Date: 2015/10/20 08:46:25 $
- *    $Revision: 2.31 $
  *
  *        \brief  Chameleon-V2 routines for chameleon library
  *
