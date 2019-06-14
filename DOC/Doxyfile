@@ -4,7 +4,6 @@
 #MDIS_COMMIT=2ad7ae04e6d0632647080486d611d0317263c22f
 
 PROJECT_NAME           = "Chameleon Library"
-PROJECT_NUMBER         = 
 INPUT                  = ../ \
                          $(MEN_COM_INC)/MEN/chameleon.h
 
