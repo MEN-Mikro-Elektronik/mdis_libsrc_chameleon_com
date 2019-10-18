@@ -1,7 +1,7 @@
 @INCLUDE_PATH = $(MEN_DOXYGENTMPL)
 @INCLUDE = DoxyfileCommon
 
-#MDIS_COMMIT=063c2b24cf11944949881865588ee4b117be2324
+#MDIS_COMMIT=5f975d1f55212d9a72b83fb6827bac6c3ed9186d
 
 PROJECT_NAME           = "Chameleon Library"
 INPUT                  = ../ \
