@@ -267,6 +267,9 @@ typedef struct {
 /*--------------------------------------*/
 /*	PROTOTYPES     	                    */
 /*--------------------------------------*/
+#if _WRS_VXWORKS_MAJOR == 7
+IMPORT VXB_DEV_ID sysGetFpgaPciCtrlID(void);
+#endif
 /*--------------------------------------*/
 /*	PROTOTYPES     	                    */
 /*--------------------------------------*/
@@ -403,6 +406,11 @@ _STATIC_ int32 InitPci(
 	int32				error=0;
 	void				*tblAddr=NULL;
 	u_int32				barVal;
+#if _WRS_VXWORKS_MAJOR == 7
+	VXB_DEV_ID pciId = sysGetFpgaPciCtrlID();
+	VXB_RESOURCE * pRes = NULL;
+	VXB_RESOURCE_ADR * pResAdr = NULL;
+#endif
 
 	if( !chahP )
 		return CHAMELEONV2_HANDLE_ILL;
@@ -412,9 +420,8 @@ _STATIC_ int32 InitPci(
 	DBGCMD( DBH = NULL );
 	DBGINIT((NULL,&DBH));
 	DBGCMD( DBG_MYLEVEL = DBG_INITLEVEL );
-	DBGWRT_1((DBH,"CHAM - InitPci: pci-device domain/bus/dev/func=%d/%d/%d/%d\n",
+	DBGWRT_1((DBH,"CHAM - InitPci: pci-device domain/bus/dev/func=%d/%d/%d/%d\n", 
 				OSS_DOMAIN_NBR( pciBus ), OSS_BUS_NBR( pciBus ), pciDev, pciFunc ));
-
 	/*------------------------------+
 	|  check if PCI device present  |
 	+------------------------------*/
@@ -503,8 +510,25 @@ _STATIC_ int32 InitPci(
 				/* no translated address available */
 				h->ba[i].addr = 0;
 				h->ba[i].type = -1;	/* unused */
-
+				
 			}
+#if _WRS_VXWORKS_MAJOR == 7
+			pRes = vxbResourceAlloc (pciId, VXB_RES_MEMORY, (UINT16)i);
+			if (pRes != NULL)
+			{
+				pResAdr = (VXB_RESOURCE_ADR *)pRes->pRes;
+				if (pResAdr != NULL)
+				{
+					h->ba[i].addr = pResAdr->virtual;
+					h->ba[i].size = pResAdr->size;
+					h->ba[i].reghandle = pResAdr->pHandle;
+				}
+				else
+				{
+					(void) vxbResourceFree (pciId, pRes);
+				}
+			}
+#endif
 		}
 
 		DBGWRT_1((DBH,"BAR%d: h->ba[i].addr = %08x type=%d\n", i, h->ba[i].addr, h->ba[i].type ));
@@ -525,13 +549,13 @@ _STATIC_ int32 InitPci(
 		/* determine chameleon revision */
 		if( (error=HMap( h, (void*)(U_INT32_OR_64)h->ba[0].addr, &ma )) )
 			goto CLEANUP;
-
-		DBGWRT_1((DBH,"calling HCheckTable with ma=%08p, h->ba[0].addr=%08x \n",
+		
+		DBGWRT_1((DBH,"calling HCheckTable with ma=%08p, h->ba[0].addr=%08x \n", 
 				  (void*)ma, h->ba[0].addr ));
 		error = HCheckTable( h, ma, &h->chaRev );
-
+		
 		HUnmap( h, ma );
-
+		
 		if( error )
 			goto CLEANUP;
 
@@ -543,15 +567,15 @@ _STATIC_ int32 InitPci(
 				goto CLEANUP;
 			}
 			/* determine number of units, dump info while we're here */
-			DBGWRT_1((DBH, " Unit                modCode Rev    Inst  IRQ  BAR Offset   Addr\n"));
+			DBGWRT_1((DBH, " Unit                modCode Rev    Inst\tIRQ\tBAR Offset   Addr\n"));
 				i=0;
 			while( ChameleonUnitIdent( h->h0, i, &cha0Unit ) == CHAMELEON_OK ) {
-
+	
 				DBGWRT_1((DBH, " %02d %-17s"  		/* idx + name		*/
 							   "0x%04x %2d"			/* devId/Rev. */
 							   "   0x%02x"			/* instance 		*/
 							   "\t0x%02x"			/* interrupt 		*/
-							   "   %d   0x%04x"		/* BAR / offset  	*/
+							   "\t%d   0x%04x"		/* BAR / offset  	*/
 							   "   0x%p\n",			/* addr 			*/
 				   i, ChameleonModName( cha0Unit.modCode), cha0Unit.modCode, cha0Unit.revision, cha0Unit.instance,
 				   cha0Unit.interrupt, cha0Unit.bar, (unsigned int)cha0Unit.offset, cha0Unit.addr));
@@ -562,23 +586,23 @@ _STATIC_ int32 InitPci(
 			/* finish */
 			goto CLEANUP;
 		}
-	}
+	} 
 	else{
 #ifdef MAC_IO_MAPPED
 		DBGWRT_ERR((DBH,"*** CHAM - InitPci(V0): bar 0 MEM mapped. NOT supported!\n"));
-#else
+#else 	
 		DBGWRT_ERR((DBH,"*** CHAM - InitPci(V0): bar 0 I/O mapped. NOT supported!\n"));
 #endif
 	} /* if */
 }
-#endif
-	/*if Chameleon V0 is not supported or
+#endif	
+	/*if Chameleon V0 is not supported or 
 	 * Chameleon V0 is supported but not found
 	 */
 	/*---------------------------------+
 	|  Search base table in Bar0..5    |
 	+---------------------------------*/
-	for( i=0; i<NBR_OF_BARS; i++ ){
+	for( i=0; i<NBR_OF_BARS; i++ ){		
 		/* am I able to access bar address space type? */
 	#ifdef MAC_IO_MAPPED
 		if( h->ba[i].type == 1 )	/* io */
@@ -587,10 +611,10 @@ _STATIC_ int32 InitPci(
 	#endif
 		{
 			tblAddr = ((void*)(U_INT32_OR_64)h->ba[i].addr);
-
+			
 			/* enumerate the table */
 			error = HEnumTbl( h, tblAddr, NULL );
-
+			
 			/* table found in current bar? */
 			if( error == 0 ){
 				break;
@@ -604,7 +628,7 @@ _STATIC_ int32 InitPci(
 		} else {
 	#ifdef MAC_IO_MAPPED
 			DBGWRT_ERR((DBH,"*** CHAM - InitPci(V2): bar %d MEM mapped. NOT supported!\n",i));
-	#else
+	#else 	
 			DBGWRT_ERR((DBH,"*** CHAM - InitPci(V2): bar %d I/O mapped. NOT supported!\n",i));
 	#endif
 		} /* if */
@@ -940,7 +964,7 @@ _STATIC_ int32 UnitIdent(
 	if( !chah )
 		return CHAMELEONV2_HANDLE_ILL;
 
-	return UnitIdentNode(h, idx, unit, &unitN );
+	return UnitIdentNode(h, idx, unit, &unitN ); 
 }
 
 /**********************************************************************/
@@ -1059,13 +1083,14 @@ static int32 UnitIdentNode(
 				unit->devId, unit->instance, unit->size, unitN->prevBrgN->size ));
 			return CHAMELEONV2_TABLE_ERR;
 		}
-
+		
 		bar = unitN->prevBrgN->bar;
 		brgOff = unitN->prevBrgN->offset;
 	}
 
 	/* compute unit's address */
 	unit->addr = (void*)(U_INT32_OR_64)(h->ba[bar].addr + brgOff + offset);
+	unit->regHandle = (void*)(U_INT32_OR_64)(h->ba[bar].reghandle);
 
 	DBGWRT_3((DBH," unit address=%08p (= BAR%d=0x%x + brgOffs=0x%x + offset=0x%x)\n",
 		unit->addr, bar, h->ba[bar].addr, brgOff, offset));
@@ -1184,7 +1209,7 @@ _STATIC_ int32 BridgeIdent(
 }
 
 /**********************************************************************/
-/** Helper function for BridgeIdent() to get the BRG_NODE
+/** Helper function for BridgeIdent() to get the BRG_NODE  
  *
  *	\param h		ptr to CHAMELEONV2_HDL
  *  \param idx		index of bridge to query (0..n)
@@ -1372,8 +1397,8 @@ _STATIC_ int32 InstanceFind(
 			else if( (find.flags & CHAMELEONV2_FF_BRGALL) &&
 					 unitN && /* is NULL for chaRev=0/1 */
 					 (unitN->prevBrgN) ){
-
-				/* fill a CHAMELEONV2_BRIDGE struct for prev-brg node */
+				
+				/* fill a CHAMELEONV2_BRIDGE struct for prev-brg node */ 
 				CHAMELEONV2_BRIDGE	bridgePrev;
 				brgN = unitN->prevBrgN;
 				BridgeIdentNode( h, 0, &bridgePrev, &brgN );
@@ -1552,7 +1577,7 @@ _STATIC_ void Term(
 	/* free all unit nodes */
 	while( (unitN = (UNIT_NODE*)OSS_DL_RemHead(&h->unitList.l)) ) {
 		OSS_MemFree(h->osh,(void*)unitN, unitN->structSize);
-			unitN = NULL;
+		unitN = NULL;
 	}
 
 	/* free all cpu nodes */
@@ -1837,7 +1862,7 @@ static int32 HEnumTbl( CHAMELEONV2_HDL *h, void *tblAddr, BRG_NODE *prevBrgN )
 		/*---------+
 		|  END     |
 		+---------*/
-		case CHAV2_DTYPE_END:
+		case CHAV2_DTYPE_END: 
 			end=1;
 			DBGWRT_3((DBH,"%sHEnumTbl#%da: END found at tblAddr=%08p\n",
 				spP, recLev, (void*)ma));
@@ -2113,16 +2138,16 @@ CLEANUP:
 	if( recLev == 0 ){
 		u_int16				dbgNbr=0;
 		CHAMELEONV2_UNIT 	unit;
-
-		DBGWRT_1((DBH, "%s Unit                devId   Grp Rev  Inst  IRQ   BAR  Offset      Addr\n",spP));
-
+	
+		DBGWRT_1((DBH, "%s Unit                devId   Grp Rev  Inst\tIRQ\tBAR Offset   Addr\n",spP));
+		
 		while ( (0 == UnitIdent( h, dbgNbr, &unit )) ){
 			DBGWRT_1((DBH, " %02d %-17s"  		/* idx + name		*/
 			               "0x%04x %2d   %2d"	/* devId/Group/Rev. */
 	                       "   0x%02x"			/* instance 		*/
-	                       "  0x%02x"			/* interrupt 		*/
-	                       "   %d   0x%08x"		/* BAR / offset  	*/
-	                       "  0x%p\n",			/* addr 			*/
+	                       "\t0x%02x"			/* interrupt 		*/
+	                       "\t%d   0x%04x"		/* BAR / offset  	*/
+	                       "   %p\n",			/* addr 			*/
 			   dbgNbr, CHAM_DevIdToName( unit.devId), unit.devId, unit.group, unit.revision, unit.instance,
 			   unit.interrupt, unit.bar, (unsigned int)unit.offset, unit.addr));
 			dbgNbr++;
