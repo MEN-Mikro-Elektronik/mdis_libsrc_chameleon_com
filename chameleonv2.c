@@ -267,7 +267,7 @@ typedef struct {
 /*--------------------------------------*/
 /*	PROTOTYPES     	                    */
 /*--------------------------------------*/
-#if _WRS_VXWORKS_MAJOR == 7
+#if defined(VXWORKS) && (_WRS_VXWORKS_MAJOR == 7)
 IMPORT VXB_DEV_ID sysGetFpgaPciCtrlID(void);
 #endif
 /*--------------------------------------*/
@@ -406,7 +406,7 @@ _STATIC_ int32 InitPci(
 	int32				error=0;
 	void				*tblAddr=NULL;
 	u_int32				barVal;
-#if _WRS_VXWORKS_MAJOR == 7
+#if defined(VXWORKS) && (_WRS_VXWORKS_MAJOR == 7)
 	VXB_DEV_ID pciId = sysGetFpgaPciCtrlID();
 	VXB_RESOURCE * pRes = NULL;
 	VXB_RESOURCE_ADR * pResAdr = NULL;
@@ -512,7 +512,7 @@ _STATIC_ int32 InitPci(
 				h->ba[i].type = -1;	/* unused */
 
 			}
-#if _WRS_VXWORKS_MAJOR == 7
+#if defined(VXWORKS) && (_WRS_VXWORKS_MAJOR == 7)
 			pRes = vxbResourceAlloc (pciId, VXB_RES_MEMORY, (UINT16)i);
 			if (pRes != NULL)
 			{
