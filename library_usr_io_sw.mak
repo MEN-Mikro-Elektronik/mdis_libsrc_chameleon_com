@@ -39,7 +39,8 @@ MAK_SWITCH=$(SW_PREFIX)MAC_IO_MAPPED 			\
 		   $(SW_PREFIX)CHAM_VARIANT=IO    		\
            $(SW_PREFIX)CHAMV2_VARIANT=IoSw 		\
            $(SW_PREFIX)MAC_BYTESWAP				\
-           $(SW_PREFIX)MAC_USERSPACE
+           $(SW_PREFIX)MAC_USERSPACE			\
+           $(SW_PREFIX)OSS_USR_IO_MAPPED_ACC_EN
 
 MAK_INP1 = chameleonv2$(INP_SUFFIX)
 MAK_INP2 = chameleon_strings$(INP_SUFFIX)
